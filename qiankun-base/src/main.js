@@ -17,7 +17,7 @@ import {
     props:{a:1}
   },
   {
-    name: 'reacrApp',
+    name: 'reactApp',
     entry: '//localhost:3000', 
     container: '#react', 
     activeRule: '/react',
