@@ -12,7 +12,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "serve": "react-app-rewired start && set BROWSER=none ",
+    "serve": "set PORT=8200 && react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject"

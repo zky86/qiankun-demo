@@ -23,6 +23,7 @@ if (!window.__POWERED_BY_QIANKUN__) { // 默认独立运行
 // 父应用加载子应用，子应用必须暴露三个接口：bootstrap、mount、unmount
 // 子组件的协议就ok了
 export async function bootstrap(props) {
+  console.log(123);
   console.log(props);
 };
 
