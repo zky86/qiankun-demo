@@ -1,7 +1,6 @@
 import React, { Suspense, useState, useEffect } from "react";
 import { Menu } from "antd";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-import "./index.css";
 import Home from "./pages/home";
 import List from "./pages/list";
 import Communication from "./pages/communication";

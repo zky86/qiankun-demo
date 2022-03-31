@@ -1,0 +1,30 @@
+{
+  "name": "micro-front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "examples:install": "npm-run-all --serial install:*",
+    "install:main": "cd micro-app-main && yarn",
+    "install:react": "cd micro-app-react && yarn",
+    "install:vue": "cd micro-app-vue && yarn",
+    "serve": "npm-run-all --parallel start:*",
+    "start:base": "cd qiankun-base && yarn serve",
+    "start:vue": "cd qiankun-vue && yarn serve",
+    "start:react": "cd qiankun-react && yarn serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a1029563229/micro-front-template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a1029563229/micro-front-template/issues"
+  },
+  "homepage": "https://github.com/a1029563229/micro-front-template#readme",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {}
+}
