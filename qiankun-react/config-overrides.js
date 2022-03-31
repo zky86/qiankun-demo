@@ -1,8 +1,22 @@
+const path = require("path");
 module.exports = {
   webpack: config => {
     config.output.library = "reactApp";
     config.output.libraryTarget = "umd";
     config.output.publicPath = "http://localhost:8200/"; // 此应用自己的端口号
+
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "@": path.resolve(__dirname, "src"),
+    };
+
+    let rule = config.module.rules.find((rule) => rule.oneOf);
+
+    const ruleBabel = rule.oneOf[3];
+    ruleBabel.options.plugins.push([
+      "styled-jsx/babel",
+      { optimizeForSpeed: true },
+    ]);
     return config;
   },
   devServer: configFunction => {

@@ -27,7 +27,7 @@ export default {
   },
   data() {
     return {
-      selectKey: 1,
+      selectKey: '',
       menus: [
         {
           index: "0",
@@ -92,10 +92,13 @@ export default {
   methods: {
     // 初始化菜单
     initMenus() {
+      console.log(this.$route.path)
       const currentMenu = this.findCurrentMenu(this.menus, this.$route.path);
+      console.log(currentMenu)
       if (!currentMenu) return;
       const { index } = currentMenu;
       this.selectKey = index;
+      console.log(this.selectKey)
     },
     // 匹配规则
     findCurrentMenu(menus, currentPath) {
