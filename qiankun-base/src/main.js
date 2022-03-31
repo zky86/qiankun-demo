@@ -7,9 +7,11 @@ import './assets/reset.css';
 import mountApps from "./micro";
 Vue.use(ElementUI);
 mountApps({
-  // sandbox: {
-  //   strictStyleIsolation: true,
-  // },
+  prefetch: false, // 取消预加载
+  sandbox: {
+    // strictStyleIsolation: true,
+    experimentalStyleIsolation: true 
+  },
 });
 Vue.config.productionTip = false
 new Vue({

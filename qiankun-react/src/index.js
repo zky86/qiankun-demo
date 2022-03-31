@@ -18,26 +18,26 @@ import "antd/dist/antd.css";
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 // reportWebVitals();
 
-function render(){
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+
+if (!window.__POWERED_BY_QIANKUN__) {
+  render();
 }
 
-if(!window.__POWERED_BY_QIANKUN__){
-render();
+function render(props = {}) {
+  ReactDOM.render(<App />, document.getElementById("root"));
 }
 
-export async function bootstrap(){
+export async function bootstrap() {
+  console.log("react app bootstraped");
+}
 
+export async function mount(props) {
+  console.log("reactApp mount", props);
+  render(props);
 }
-export async function mount() {
-render()
-}
-export async function unmount(){
-ReactDOM.unmountComponentAtNode( document.getElementById('root'));  // 卸载节点
+
+export async function unmount() {
+  console.log("react unmount");
+  ReactDOM.unmountComponentAtNode(document.getElementById("root"));
 }
 

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-
+import './assets/reset.css';
 // Vue.config.productionTip = false
 
 
@@ -33,4 +33,5 @@ export async function mount(props) {
 
 export async function unmount(props) {
   instance.$destroy();
+  console.log("VueMicroApp unmount");
 }
