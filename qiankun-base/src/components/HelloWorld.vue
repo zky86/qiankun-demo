@@ -1,19 +1,18 @@
 <template>
   <div class="hello">
-    <h1>基座首页</h1>
+    <h3>基座主页</h3>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'helloWorld',
+  name: "helloWorld",
   props: {
-    msg: String
-  }
-}
+    msg: String,
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 </style>

@@ -5,7 +5,7 @@
       <router-link to="/list">列表页</router-link> |
       <router-link to="/communication">通信页</router-link>
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 

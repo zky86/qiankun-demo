@@ -1,11 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App.jsx';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App.jsx";
 import "antd/dist/antd.css";
 
 // import reportWebVitals from './reportWebVitals';
-
 // ReactDOM.render(
 //   <React.StrictMode>
 //     <App />
@@ -17,7 +16,6 @@ import "antd/dist/antd.css";
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 // reportWebVitals();
-
 
 if (!window.__POWERED_BY_QIANKUN__) {
   render();
@@ -40,4 +38,3 @@ export async function unmount() {
   console.log("react unmount");
   ReactDOM.unmountComponentAtNode(document.getElementById("root"));
 }
-

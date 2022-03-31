@@ -27,7 +27,7 @@ export default {
   },
   data() {
     return {
-      selectKey: '',
+      selectKey: "",
       menus: [
         {
           index: "0",
@@ -43,15 +43,15 @@ export default {
         },
         {
           index: "2",
-          key: "Vue",
-          title: "Vue 子应用",
-          path: "/vue",
+          key: "communication",
+          title: "基座通讯页",
+          path: "/communication",
         },
         {
           index: "3",
-          key: "React",
-          title: "React 子应用",
-          path: "/react",
+          key: "Vue",
+          title: "Vue 子应用",
+          path: "/vue",
         },
         {
           index: "4",
@@ -61,21 +61,21 @@ export default {
         },
         {
           index: "5",
-          key: "ReactList",
-          title: "React 列表页",
-          path: "/react/list",
-        },
-        {
-          index: "6",
-          key: "MainCommunication",
-          title: "主应用通讯页",
-          path: "/communication",
-        },
-        {
-          index: "7",
           key: "VueCommunication",
           title: "Vue 通讯页",
           path: "/vue/communication",
+        },
+        {
+          index: "6",
+          key: "React",
+          title: "React 子应用",
+          path: "/react",
+        },
+        {
+          index: "7",
+          key: "ReactList",
+          title: "React 列表页",
+          path: "/react/list",
         },
         {
           index: "8",
@@ -93,9 +93,12 @@ export default {
     // 初始化菜单
     initMenus() {
       const currentMenu = this.findCurrentMenu(this.menus, this.$route.path);
+      // console.log(this.menus);
+      // console.log(this.$route.path);
       if (!currentMenu) return;
       const { index } = currentMenu;
       this.selectKey = index;
+      // console.log(index);
     },
     // 匹配规则
     findCurrentMenu(menus, currentPath) {
@@ -103,7 +106,6 @@ export default {
         const menu = menus[i];
         const { path } = menu;
         if (path === currentPath) return menu;
-
         const currentMenu = this.findCurrentMenu(
           menu.children || [],
           currentPath
