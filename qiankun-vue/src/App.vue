@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">首页</router-link> |
+      <router-link to="/">主页</router-link> |
       <router-link to="/list">列表页</router-link> |
       <router-link to="/communication">通信页</router-link>
     </div>

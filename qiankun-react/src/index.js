@@ -30,7 +30,7 @@ export async function bootstrap() {
 }
 
 export async function mount(props) {
-  console.log("reactApp mount", props);
+  // console.log("reactApp mount", props);
   render(props);
 }
 
