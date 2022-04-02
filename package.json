@@ -11,7 +11,8 @@
     "serve": "npm-run-all --parallel start:*",
     "start:base": "cd qiankun-base && yarn serve",
     "start:vue": "cd qiankun-vue && yarn serve",
-    "start:react": "cd qiankun-react && yarn serve"
+    "start:react": "cd qiankun-react && yarn serve",
+    "start:react16": "cd react16 && yarn serve"
   },
   "repository": {
     "type": "git",

@@ -10,7 +10,7 @@ mountApps({
   prefetch: false, // 取消预加载
   sandbox: {
     // strictStyleIsolation: true,
-    experimentalStyleIsolation: true //子应用开始沙箱样式隔离
+    // experimentalStyleIsolation: true //子应用开始沙箱样式隔离
   },
 });
 Vue.config.productionTip = false

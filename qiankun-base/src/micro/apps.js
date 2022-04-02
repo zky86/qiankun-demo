@@ -12,5 +12,11 @@ const apps = [
     container: "#frame",
     activeRule: "/react",
   },
+  {
+    name: "react16",
+    entry: "//localhost:8300",
+    container: "#frame",
+    activeRule: "/react16",
+  }
 ];
 export default apps;
