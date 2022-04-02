@@ -35,12 +35,12 @@ export default {
           title: "基座主页",
           path: "/",
         },
-        {
-          index: "1",
-          key: "homeList",
-          title: "基座列表页",
-          path: "/homeList",
-        },
+        // {
+        //   index: "1",
+        //   key: "homeList",
+        //   title: "基座列表页",
+        //   path: "/homeList",
+        // },
         {
           index: "2",
           key: "communication",
