@@ -3,9 +3,8 @@ module.exports = {
   webpack: config => {
     config.output.library = "reactApp";
     config.output.libraryTarget = "umd";
+    // config.output.publicPath = "http://localhost:8200/"; // 此应用自己的端口号
     config.output.globalObject = "window";
-    config.output.publicPath = "http://localhost:8200/"; // 此应用自己的端口号
-
     config.resolve.alias = {
       ...config.resolve.alias,
       "@": path.resolve(__dirname, "src"),
