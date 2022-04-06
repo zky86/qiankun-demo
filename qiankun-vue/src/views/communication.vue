@@ -2,7 +2,7 @@
   <div class="communication">
     <h3>通信页</h3>
     <br />
-    <div><div class="primary" @click="getVal">获取值</div></div>
+    <div><div class="primary" @click="setVal">设置值</div></div>
     <br />
     当前值： {{ token }}
   </div>
@@ -22,13 +22,18 @@ export default {
   mounted() {
     actions.onGlobalStateChange((state, prevState) => {
       // state: 变更后的状态; prevState: 变更前的状态
-      console.log("主应用观察者：token改变前的值", prevState.token);
-      console.log("主应用观察者：token改变后的值", state.token);
+      // console.log("主应用观察者：token改变前的值", prevState.token);
+      // console.log("主应用观察者：token改变后的值", state.token);
       this.token = state.token;
-    }, true);
+    });
   },
   methods: {
-    setVal() {},
+    setVal() {
+      let token = "============NEW Vue============";
+      let from = "from-vue";
+      actions.setGlobalState({ from });
+      actions.setGlobalState({ token });
+    },
 
     getVal() {},
   },

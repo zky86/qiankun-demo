@@ -1,7 +1,8 @@
 import { initGlobalState, MicroAppStateActions } from "qiankun";
 
 const initialState = {
-  token: "============old============"
+  token: "============old============",
+  from: ''
 };
 const actions  = initGlobalState(initialState);
 
