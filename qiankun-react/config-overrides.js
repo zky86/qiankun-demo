@@ -29,6 +29,7 @@ module.exports = {
       config.historyApiFallback = true;
       config.hot = true;
       config.open = false;
+      config.liveReload = true;
       return config;
     };
   }

@@ -20,16 +20,18 @@ export default {
     };
   },
   mounted() {
-    actions.onGlobalStateChange((state, prevState) => {
-      // state: 变更后的状态; prevState: 变更前的状态
-      // console.log("主应用观察者：token改变前的值", prevState.token);
-      // console.log("主应用观察者：token改变后的值", state.token);
-      this.token = state.token;
-    });
+    if (window.__POWERED_BY_QIANKUN__) {
+      actions.onGlobalStateChange((state, prevState) => {
+        // state: 变更后的状态; prevState: 变更前的状态
+        // console.log("主应用观察者：token改变前的值", prevState.token);
+        // console.log("主应用观察者：token改变后的值", state.token);
+        this.token = state.token;
+      });
+    }
   },
   methods: {
     setVal() {
-      let token = "============NEW Vue============";
+      let token = "============ New Vue ============";
       let from = "from-vue";
       actions.setGlobalState({ from });
       actions.setGlobalState({ token });

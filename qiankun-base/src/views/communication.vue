@@ -1,6 +1,6 @@
 <template>
   <div class="communication">
-    <h3>基座通信页11</h3>
+    <h3>基座通信页</h3>
     <br />
     <div><el-button type="primary" @click="setVal">设置值</el-button></div>
     <br />
@@ -41,7 +41,7 @@ export default {
   },
   methods: {
     setVal() {
-      let token = "============NEW============";
+      let token = "============ New ============";
       let from = "from-main";
       actions.setGlobalState({ token });
       actions.setGlobalState({ from });

@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App.jsx";
 import "antd/dist/antd.css";
-
+import actions from "./shared/actions";
 // import reportWebVitals from './reportWebVitals';
 // ReactDOM.render(
 //   <React.StrictMode>
@@ -22,6 +22,10 @@ if (!window.__POWERED_BY_QIANKUN__) {
 }
 
 function render(props = {}) {
+  if (props) {
+    // 注入 actions 实例
+    actions.setActions(props);
+  }
   ReactDOM.render(<App />, document.getElementById("root"));
 }
 
