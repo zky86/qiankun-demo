@@ -83,12 +83,12 @@ export default {
           title: "React 通讯页",
           path: "/react/communication",
         },
-        {
-          index: "8",
-          key: "react16",
-          title: "react16 子应用",
-          path: "/react16",
-        }
+        // {
+        //   index: "8",
+        //   key: "react16",
+        //   title: "react16 子应用",
+        //   path: "/react16",
+        // }
       ],
     };
   },
@@ -131,16 +131,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-body {
-    margin: 0;
-    color: rgba(0, 0, 0, 0.85);
-    font-size: 14px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !important;
-    font-variant: tabular-nums !important;
-    line-height: 1.5715 !important;
-    background-color: #fff;
-    font-feature-settings: 'tnum', "tnum" !important;
-}
+
 
 #app-base .menu-side {
   background-color: #1f2d3d;
