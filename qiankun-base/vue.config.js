@@ -20,7 +20,7 @@ module.exports = {
       },
     },
   },
-  publicPath: process.env.NODE_ENV === "production" ? "/cloud/" : "",
+  publicPath: process.env.NODE_ENV === "production" ? "/cloud/" : "/",
   devServer: {
     port: 8000,
     open: true,
