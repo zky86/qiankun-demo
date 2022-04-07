@@ -130,8 +130,7 @@ export default {
 };
 </script>
 
-<style >
-
+<style lang="scss" scoped>
 body {
     margin: 0;
     color: rgba(0, 0, 0, 0.85);
@@ -146,23 +145,22 @@ body {
 #app-base .menu-side {
   background-color: #1f2d3d;
   color: #fff;
-}
-.menu-side li {
-  display: block;
-}
-#app-base .menu-side .el-menu-item {
-  color: #fff;
-}
-#app-base .menu-side .el-menu-item:focus,
-#app-base .menu-side .el-menu-item:hover {
-  outline: 0;
-  background-color: #001528;
-}
-#app-base .menu-side .is-active {
-  background-color: #001528;
-  color: #1b8ddc;
-}
-#app-base .menu-side {
   border-right: none;
+  li {
+    display: block;
+  }
+  .el-menu-item {
+    color: #fff;
+    &:focus,
+    &:hover {
+      outline: 0;
+      background-color: #001528;
+    }
+  }
+  .is-active {
+    background-color: #001528;
+    color: #1b8ddc;
+  }
 }
+
 </style>
