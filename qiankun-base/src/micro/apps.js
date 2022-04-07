@@ -1,6 +1,6 @@
 import config from "../config";
 console.log("运行的应用：", config);
-const { vueApp_url, reactApp_url } = config;
+const { vueApp_url, reactApp_url, okayx_url} = config;
 const apps = [
   {
     name: "vueApp", // 应用名字
@@ -14,6 +14,12 @@ const apps = [
     entry: reactApp_url,
     container: "#frame",
     activeRule: "/react",
+  },
+  {
+    name: "okayxApp",
+    entry: okayx_url,
+    container: "#frame",
+    activeRule: "/okayx",
   },
   // {
   //   name: "react16",

@@ -20,14 +20,14 @@ registerMicroApps(apps, {
   beforeLoad: (app) => {
     // 加载微应用前，加载进度条
     NProgress.start();
-    console.log("before load", app.name);
+    // console.log("before load", app.name);
     return Promise.resolve();
   },
   // qiankun 生命周期钩子 - 微应用挂载后
   afterMount: (app) => {
     // 加载微应用前，进度条加载完成
     NProgress.done();
-    console.log("after mount", app.name);
+    // console.log("after mount", app.name);
     return Promise.resolve();
   },
 });

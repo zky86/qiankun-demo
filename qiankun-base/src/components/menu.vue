@@ -6,20 +6,21 @@
     ref="menu-side"
     :default-active="selectKey + ''"
   >
-    <router-link
+    <!-- <router-link
       v-for="(item, index) in menus"
       :key="item.key"
       :to="{ path: item.path }"
-    >
-      <el-menu-item :index="index + ''">
+    > -->
+      <el-menu-item v-for="(item, index) in menus" :index="index + ''" :key="item.key" @click=goUrl(item.path)>
         <span slot="title">{{ item.title }}</span>
       </el-menu-item>
-    </router-link>
+    <!-- </router-link> -->
   </el-menu>
 </template>
 
 <script>
 import router from "../router";
+import actions from "../shared/actions";
 export default {
   name: "Menu",
   props: {
@@ -29,50 +30,57 @@ export default {
     return {
       selectKey: "",
       menus: [
+    
         {
           index: "0",
+          key: "client",
+          title: "终端管理",
+          path: "/okayx/admin/client/index",
+        },
+        {
+          index: "1",
+          key: "menu",
+          title: "菜单管理",
+          path: "/okayx/admin/menu/index",
+        },
+        {
+          index: "2",
           key: "home",
           title: "基座主页",
           path: "/",
         },
-        // {
-        //   index: "1",
-        //   key: "homeList",
-        //   title: "基座列表页",
-        //   path: "/homeList",
-        // },
         {
-          index: "1",
+          index: "3",
           key: "communication",
           title: "基座通讯页",
           path: "/communication",
         },
         {
-          index: "2",
+          index: "4",
           key: "Vue",
           title: "Vue 子应用",
           path: "/vue",
         },
         {
-          index: "3",
+          index: "5",
           key: "VueList",
           title: "Vue 列表页",
           path: "/vue/list",
         },
         {
-          index: "4",
+          index: "6",
           key: "VueCommunication",
           title: "Vue 通讯页",
           path: "/vue/communication",
         },
         {
-          index: "5",
+          index: "7",
           key: "React",
           title: "React 子应用",
           path: "/react",
         },
         {
-          index: "6",
+          index: "8",
           key: "ReactList",
           title: "React 列表页",
           path: "/react/list",
@@ -102,6 +110,7 @@ export default {
       // console.log(this.menus);
       // console.log(this.$route.path);
       if (!currentMenu) return;
+      console.log(currentMenu)
       const { index } = currentMenu;
       this.selectKey = index;
       // console.log(index);
@@ -119,6 +128,12 @@ export default {
         if (currentMenu) return currentMenu;
       }
       return null;
+    },
+    goUrl(path) {
+      // console.log('跳转路由')
+      let from = path;
+      actions.setGlobalState({ from });
+      this.$router.push({ path: from });
     },
     handleOpen(key, keyPath) {
       // console.log(key, keyPath);
