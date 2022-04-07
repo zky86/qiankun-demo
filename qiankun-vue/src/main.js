@@ -17,14 +17,23 @@ if (!window.__POWERED_BY_QIANKUN__) {
 }
 
 function render(props = {}) {
+  // console.log(11, props)
+  const { container } = props;
   if (props) {
     // 注入 actions 实例
     actions.setActions(props);
   }
+
+  // instance = new Vue({
+  //   router,
+  //   render: (h) => h(App),
+  // }).$mount("#app"); // 这里是挂载到自己的html中  基座会拿到这个挂载后的html 将其插入进去
+
   instance = new Vue({
     router,
     render: (h) => h(App),
-  }).$mount("#app"); // 这里是挂载到自己的html中  基座会拿到这个挂载后的html 将其插入进去
+  }).$mount(container ? container.querySelector('#app') : '#app')
+
 }
 
 // 父应用加载子应用，子应用必须暴露三个接口：bootstrap、mount、unmount
