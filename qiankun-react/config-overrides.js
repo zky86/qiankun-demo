@@ -1,7 +1,8 @@
 const path = require("path");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   webpack: config => {
-    config.output.publicPath = process.env.NODE_ENV === "production" ? "/react/" : "/react/";
+    config.output.publicPath = process.env.NODE_ENV === "production" ? "/react/" : "/";
     config.output.library = "reactApp";
     config.output.libraryTarget = "umd";
     // config.output.publicPath = "http://localhost:8200/"; // 此应用自己的端口号
