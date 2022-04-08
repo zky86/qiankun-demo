@@ -146,8 +146,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-
 #app-base .menu-side {
   background-color: #1f2d3d;
   color: #fff;

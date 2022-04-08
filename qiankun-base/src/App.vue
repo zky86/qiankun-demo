@@ -36,7 +36,11 @@ export default {
   methods: {},
 };
 </script>
-<style>
+<style lang="scss" scoped>
+#app-base,
+#frame {
+  height: 100%;
+}
 .app-wrapper {
   position: relative;
   height: 100%;
@@ -60,5 +64,6 @@ export default {
   transition: margin-left 0.28s;
   margin-left: 210px;
   position: relative;
+  height: 100%;
 }
 </style>

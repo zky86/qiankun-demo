@@ -64,11 +64,11 @@ const MenuTop = () => {
   // 切换菜单
   const changeMenu = () => {
     const { pathname } = window.location;
-    console.log(window.location);
-    console.log(menus);
+    // console.log(window.location);
+    // console.log(menus);
     const menu = menus.find((item) => `${item.url}` === pathname);
     setSelectKeys(() => [menu ? menu.key : "react"]);
-    console.log(selectedKeys);
+    // console.log(selectedKeys);
   };
 
   useEffect(() => {

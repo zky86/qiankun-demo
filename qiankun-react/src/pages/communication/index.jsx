@@ -6,7 +6,7 @@ const Status = () => {
   const history = useHistory();
   const [token, setToken] = useState();
   useEffect(() => {
-    console.log(window.__POWERED_BY_QIANKUN__);
+    // console.log(window.__POWERED_BY_QIANKUN__);
     if (window.__POWERED_BY_QIANKUN__) {
       actions.onGlobalStateChange((state) => {
         const { token } = state;
