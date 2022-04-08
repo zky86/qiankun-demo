@@ -31,7 +31,8 @@ const routes = [
 
 const router = new VueRouter({
   mode: "history",
-  base: "/vue/", // 访问/vue的时候加载
+  // base: "/vue/", // 访问/vue的时候加载
+  base: window.__POWERED_BY_QIANKUN__ ? '/child-vue/' : '/vue/', // 访问/vue的时候加载
   routes,
 });
 

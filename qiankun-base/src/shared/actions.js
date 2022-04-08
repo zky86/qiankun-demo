@@ -2,7 +2,7 @@ import { initGlobalState, MicroAppStateActions } from "qiankun";
 
 const initialState = {
   token: "============ Old ============",
-  from: '/okayx/admin/client/index' //初始化入口
+  from: '/child-okayx/admin/client/index' //初始化入口
 };
 const actions  = initGlobalState(initialState);
 

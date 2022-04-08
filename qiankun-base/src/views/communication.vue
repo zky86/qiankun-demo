@@ -33,7 +33,7 @@ export default {
           type: "success",
           duration: 3000,
           onClose: () => {
-            this.$router.push("/vue/communication");
+            this.$router.push("/child-vue/communication");
           },
         });
       }

@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h3>基座列表页</h3>
+    <h3>基座列表页1</h3>
   </div>
 </template>
 

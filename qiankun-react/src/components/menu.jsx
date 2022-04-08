@@ -1,29 +1,61 @@
 import React, { useState, useEffect } from "react";
 import { Menu } from "antd";
 import { Link, useHistory } from "react-router-dom";
-const menus = [
-  {
-    key: "react",
-    route: "/",
-    title: "主页",
-  },
-  {
-    key: "react-list",
-    route: "/list",
-    title: "列表页",
-  },
-  {
-    key: "react-communication",
-    route: "/communication",
-    title: "通讯页",
-  },
-  {
-    key: "vue",
-    route: "/vue",
-    title: "Vue 子应用",
-  },
-];
-const BASE_NAME = window.__POWERED_BY_QIANKUN__ ? "/react" : "";
+
+let menus;
+if (window.__POWERED_BY_QIANKUN__) {
+  menus = [
+    {
+      key: "react",
+      route: "/",
+      title: "主页",
+      url: "/child-react",
+    },
+    {
+      key: "react-list",
+      route: "/list",
+      title: "列表页",
+      url: "/child-react/list",
+    },
+    {
+      key: "react-communication",
+      route: "/communication",
+      title: "通讯页",
+      url: "/child-react/communication",
+    },
+    // {
+    //   key: "vue",
+    //   route: "/vue",
+    //   title: "Vue 子应用",
+    // },
+  ];
+} else {
+  menus = [
+    {
+      key: "react",
+      route: "/",
+      title: "主页",
+      url: "/react",
+    },
+    {
+      key: "react-list",
+      route: "/list",
+      title: "列表页",
+      url: "/react/list",
+    },
+    {
+      key: "react-communication",
+      route: "/communication",
+      title: "通讯页",
+      url: "/react/communication",
+    },
+    // {
+    //   key: "vue",
+    //   route: "/vue",
+    //   title: "Vue 子应用",
+    // },
+  ];
+}
 const MenuTop = () => {
   const history = useHistory();
   const [refresh, setRefresh] = useState(0);
@@ -32,8 +64,11 @@ const MenuTop = () => {
   // 切换菜单
   const changeMenu = () => {
     const { pathname } = window.location;
-    const menu = menus.find((item) => `${BASE_NAME}${item.route}` === pathname);
+    console.log(window.location);
+    console.log(menus);
+    const menu = menus.find((item) => `${item.url}` === pathname);
     setSelectKeys(() => [menu ? menu.key : "react"]);
+    console.log(selectedKeys);
   };
 
   useEffect(() => {

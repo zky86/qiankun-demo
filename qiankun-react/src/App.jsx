@@ -4,7 +4,7 @@ import Home from "./pages/home";
 import List from "./pages/list";
 import MenuTop from "./components/menu";
 import Communication from "./pages/communication";
-const BASE_NAME = window.__POWERED_BY_QIANKUN__ ? "/react" : "/";
+const BASE_NAME = window.__POWERED_BY_QIANKUN__ ? "/child-react/" : "/react/";
 const App = () => {
   return (
     <Router basename={BASE_NAME}>
