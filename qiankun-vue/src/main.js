@@ -20,6 +20,7 @@ function render(props = {}) {
   // console.log(11, props)
   const { container } = props;
   if (props) {
+    console.log(11, props)
     // 注入 actions 实例
     actions.setActions(props);
   }

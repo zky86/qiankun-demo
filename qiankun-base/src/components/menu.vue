@@ -110,7 +110,7 @@ export default {
       // console.log(this.menus);
       // console.log(this.$route.path);
       if (!currentMenu) return;
-      console.log(currentMenu)
+      // console.log(currentMenu)
       const { index } = currentMenu;
       this.selectKey = index;
       // console.log(index);
